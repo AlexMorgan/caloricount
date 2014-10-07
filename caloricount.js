@@ -106,13 +106,7 @@ function clearInput() {
   snacks = document.getElementById('snacksCalories');
   snacks.value = 0;
 
-  available = document.getElementById('available');
-  available.value = '';
-
-  consumed = document.getElementById('consumed');
-  consumed.value = '';
-
-  outputs = document.getElementsByClassName("perc");
+  outputs = document.getElementsByTagName('output');
   for (i = 0; i < outputs.length; i++) {
     outputs[i].innerHTML = '';
   }
