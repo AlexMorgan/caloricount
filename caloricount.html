@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+  The GUI for the Caloricount app
+
+  Note: The calculated values in the header are text nodes in td elements
+        whereas the calculated values in the main section are output
+        elements in td elements.
+-->
+
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css"
+	  href="caloricount.css" />
+
+    <script src="caloricount.js"  type="text/javascript"></script>
+
+    <title>Caloricount</title>
+  </head>
+
+  <body>
+
+    <header>
+      <table class="header">
+        <thead>
+          <tr>
+	    <th class="header">
+              <img src="images/caloricount.png" alt="Caloricount"/>
+            </th>
+	    <th class="label">Goal</th>
+	    <th class="label">Consumed</th>
+	    <th class="label">Available</th></tr>
+        </thead>
+	<tbody>
+          <tr>
+	    <td>CS345, James Madison University</td>
+            <td>
+	      <input id="goal" class="given" type="number" value="2000" />
+            </td>
+            <td>
+	      <output id="consumed" class="calculated"></output>
+	    </td>
+            <td>
+	      <output id="available" class="calculated"></output>
+	    </td>
+          </tr>
+	</tbody>
+      </table>
+    </header>
+
+    <section class="center">
+    <table>
+      <thead>
+        <tr>
+	  <th></th>
+	  <th></th>
+	  <th colspan="2">Percent Of</th>
+	</tr>
+        <tr>
+	  <th></th>
+	  <th>Calories</th>
+	  <th>Consumed</th>
+	  <th>Goal</th>
+	</tr>
+      </thead>
+      <tbody>
+        <tr class="unshaded" id="breakfast">
+	  <td>Breakfast</td>
+          <td><input type="number" id="breakfastCalories" value="0"/></td>
+          <td><output id="breakfastConsumedPercentage"></output></td>
+          <td><output id="breakfastGoalPercentage"></output></td>
+        </tr>
+	<tr class="shaded" id="lunch">
+	  <td>Lunch</td>
+	  <td><input type="number" id="lunchCalories" value="0"/></td>
+	  <td><output id="lunchConsumedPercentage"></output></td>
+	  <td><output id="lunchGoalPercentage"></output></td>
+        </tr>
+        <tr class="unshaded" id="dinner">
+	  <td>Dinner</td>
+	  <td><input type="number" id="dinnerCalories" value="0"/></td>
+	  <td><output id="dinnerConsumedPercentage"></output></td>
+	  <td><output id="dinnerGoalPercentage"></output></td>
+	</tr>
+	<tr class="shaded" id="snacks">
+	  <td>Snacks</td>
+	  <td><input type="number" id="snacksCalories" value="0"/></td>
+	  <td><output id="snacksConsumedPercentage"></output></td>
+	  <td><output id="snacksGoalPercentage"></output></td>
+	</tr>
+      </tbody>
+    </table>
+    <button id="clear" onclick="clearInput()">Clear</button>
+    </section>
+
+    <script type="text/javascript">registerHandlers();</script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+/**
+ * The stylesheet for the Caloricount app's GUI
+ */
+
+
+body {
+    font-size: 10pt;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+header {
+    padding-bottom: 30px;
+    text-align: right;
+    width: 100%;
+}
+
+input:focus {
+    background-color: rgb(255,255,204);
+}
+
+input {
+    border-color: rgb(102,153,204);
+    border-style: solid;
+    border-width: 1px;
+    font-size: 100%;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+input[type="number"] {
+    text-align: right;
+    width: 8em;
+}
+
+table, td, th, tr {
+    border-collapse: collapse; 
+    border-color: rgb(102,153,204);
+}
+
+table {
+    border-style: solid;
+    border-width: 1px;
+}
+
+table.header {
+    width: 100%;
+}
+
+th, td {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    vertical-align: top;
+}
+
+td.given {
+    color: rgb(153,153,153);
+}
+
+td.calculated {
+    color: rgb(0, 0, 255);
+    font-size: 120%;
+    font-weight: bold;
+}
+
+th.header{
+    font-size: 200%;
+    width: 75%;
+}
+
+th.label {
+    vertical-align: bottom;
+}
+
+thead {
+    background: rgb(102,153,204);
+    color: white;
+}
+
+tr.header {
+    vertical-align: bottom;
+}
+
+tr.shaded {
+    background: rgb(235,245,255);
+}
