@@ -93,7 +93,7 @@ function calcResults() {
 
 // Clear input for calorie fields
 function clearInput() {
-  var breakfast, lunch, dinner, snacks, consumed;
+  var breakfast, lunch, dinner, snacks, consumed, outputs;
   breakfast = document.getElementById('breakfastCalories');
   breakfast.value = 0;
 
@@ -111,4 +111,9 @@ function clearInput() {
 
   consumed = document.getElementById('consumed');
   consumed.value = '';
+
+  outputs = document.getElementsByClassName("perc");
+  for (i = 0; i < outputs.length; i++) {
+    outputs[i].innerHTML = '';
+  }
 }
