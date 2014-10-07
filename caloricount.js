@@ -37,7 +37,7 @@ function registerHandlers()
    lunch = document.getElementById('lunchCalories');
    dinner = document.getElementById('dinnerCalories');
    snacks = document.getElementById('snacksCalories');
-   goal = document.getElementById('goal')
+   goal = document.getElementById('goal');
 
    breakfast.addEventListener("input", calcResults, true);
    lunch.addEventListener("input", calcResults, true);
@@ -93,7 +93,7 @@ function calcResults() {
 
 // Clear input for calorie fields
 function clearInput() {
-  var breakfast, lunch, dinner, snacks;
+  var breakfast, lunch, dinner, snacks, consumed;
   breakfast = document.getElementById('breakfastCalories');
   breakfast.value = 0;
 
