@@ -1,9 +1,11 @@
+// Calculate the total amount of calories consumed
 function totalCalories(breakfast,lunch,dinner,snacks) {
   var total;
   total = breakfast + lunch + dinner + snacks;
   return total;
 }
 
+// Calculate the total amount of calories available to consume
 function calcAvailable(consumed, goal) {
   var available;
 
@@ -11,6 +13,7 @@ function calcAvailable(consumed, goal) {
   return available;
 }
 
+// Calculate the percent of calories consumed from each meal
 function percentageConsumed(meal, total) {
   var percentage;
 
@@ -20,6 +23,7 @@ function percentageConsumed(meal, total) {
   return percentage + '%';
 }
 
+// Calculate the percentage of the goal that the meal consists of
 function percentageOfGoal(meal, goal) {
   var percentage;
 
@@ -109,5 +113,5 @@ function clearInput() {
   outputs = document.getElementsByTagName('output');
   for (i = 0; i < outputs.length; i++) {
     outputs[i].innerHTML = '';
-  }
+  };
 }
